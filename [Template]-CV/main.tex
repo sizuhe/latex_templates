@@ -1,0 +1,173 @@
+\documentclass[cv01]{cv}
+% \documentclass[cv02]{cv}
+
+\definecolor{colorMain}{HTML}{1F60E0}       % Only for CV01
+
+
+
+
+
+\begin{document}
+% ========== TITLE ==========
+% \maketitle can be changed using the first two variables {0-1}{0-1}. This changes title style and show/hides horizontal separator respectively.
+% \addNetwork uses fontawesome5 icon names to generate link and icon, therefore those names must be used on the first argument {fontawesome5 name}{user name}.
+\maketitle{1}{1}
+{John}{Doe}{Degree}
+{
+    \addPersonal{johndoe@email.com}{+00 0000000000}{ID. 0000000000}{City, Country}
+    {
+        \addNetwork{linkedin}{username}
+        \addNetwork{github}{username}
+    }
+}{
+    \lipsum[66]
+}{
+    % 3x4 (eg: 300px x 400px) image ratio is recommended
+    % \addPicture{}{distance right side}{distance top (default = 14 mm)}
+    \addPicture{\includegraphics[scale=0.25]{profile.png}}{0mm}
+}
+
+
+
+% ========== CV 01 ==========
+\cvSection{Education}
+\addSectionContent{Degree}{Institution}{$|$ Location}{XXXX - Present}
+\begin{itemize}
+    \item \lipsum[75]
+    \item \lipsum[66]
+\end{itemize}
+
+
+% --------------------------------------------------
+\addSpace
+\cvSection{Experience}
+\addSectionContent{Position}{Company}{$|$ Location}{XXXX - Present}
+\begin{itemize}
+    \item \lipsum[75]
+    \item \lipsum[66]
+\end{itemize}
+
+\addSectionContent{Position}{Company}{$|$ Location}{XXXX - XXXX}
+\begin{itemize}
+    \item \lipsum[75]
+    \item \lipsum[7]
+\end{itemize}
+
+
+% --------------------------------------------------
+\addSpace
+\cvSection{Skills}
+\addSectionContent{Technical}{Skill 1, Skill 2, Skill 3}{}{}
+
+\cvSubSection{Languages}
+\begin{multicols}{4}
+    \begin{itemize}
+        \item Item
+        \item Item
+        \item Item
+        \item Item
+    \end{itemize}
+
+    \columnbreak
+
+    \begin{itemize}
+        \item Item
+        \item Item
+        \item Item
+        \item Item
+    \end{itemize}
+
+    \columnbreak
+
+    \begin{itemize}
+        \item Item
+        \item Item
+        \item Item
+        \item Item
+    \end{itemize}
+
+    \columnbreak
+
+    \begin{itemize}
+        \item Item
+        \item Item
+        \item Item
+        \item Item
+    \end{itemize}
+\end{multicols}
+
+
+
+% ========== CV 02 ==========
+% \cvSection uses the first argument to define if the section is the first one of the column. "1" means it's the first one of the column so it doesnt create vertical space before the title, for "0" it does creates vertical space.
+% \content function is not used from the second page onwards.
+% \content{
+%     \cvSection{1}{Education}
+%     \addSectionContent{Degree}{Institution}{Location}{XXXX - XXXX}
+    
+%     \addSpace
+%     \addSectionContent{Degree}{Institution}{Location}{XXXX - XXXX}
+
+
+%     % --------------------------------------------------
+%     \cvSection{0}{Skills}
+%     \addSubSectionContent{Technical}{Skill 1, Skill 2, Skill 3, Skill 4, Skill 5, Skill 6}
+
+%     \addSpace
+%     \addSubSectionContent{Personal}{Skill 1, Skill 2, Skill 3, Skill 4, Skill 5, Skill 6}
+
+
+%     % --------------------------------------------------
+%     \cvSection{0}{Languages}
+%     \addSubSectionContent{Language}{Level}
+
+%     \addSpace
+%     \addSubSectionContent{Language}{Level}
+    
+%     \null\addDescription{\lipsum[66]}         % Additional comment (optional)
+% }{
+%     \cvSection{1}{Experience}
+%     \addSectionContent{Position}{Company}{Location}{XXXX - Present}
+%     \addSectionDescription{
+%         \lipsum[66] \faIcon{link}
+%     }
+
+%     \addSpace
+%     \addSectionContent{Position}{Company}{Location}{XXXX - XXXX}
+%     \addSectionDescription{
+%         \lipsum[66] \faIcon{link}
+%     }
+
+    
+%     % --------------------------------------------------
+%     \cvSection{0}{Projects}
+%     \addSectionContent{Position}{Company}{Location}{XXXX - Present}
+%     \begin{itemize}
+%         \item \lipsum[75]
+%         \item \lipsum[66]
+%     \end{itemize}
+    
+%     \addSpace
+%     \addSectionContent{Position}{Company}{Location}{XXXX - XXXX}
+%     \begin{itemize}
+%         \item \lipsum[75]
+%         \item \lipsum[66]
+%     \end{itemize}
+% }
+
+% \clearpage
+% \vspace*{0.4cm}
+% \afterpage      % Keep if you want to maintain second column only.
+
+% {
+%     \cvSection{1}{Experience}
+%     \addSectionContent{Position}{Company}{Location}{XXXX - Present}
+%     \addSectionDescription{\lipsum[66]}
+
+%     \addSpace
+%     \addSectionContent{Position}{Company}{Location}{XXXX - XXXX}
+%     \addSectionDescription{\lipsum[66]}
+% }
+
+
+\end{document}

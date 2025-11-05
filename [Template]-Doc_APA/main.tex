@@ -1,0 +1,45 @@
+% ===== JUST COMMENT ONE OF THE FOLLOWING =====
+\documentclass[apa01]{cls/apa-szh}
+% \documentclass[apa02]{cls/apa-szh}
+
+\usepackage[english]{babel}
+\usepackage{nomencl,array,graphicx,float,amsmath,xr,pgfplots}
+\pgfplotsset{compat=1.18}
+\usepgfplotslibrary{fillbetween}
+\renewcommand\ttdefault{ttfamily}
+\urlstyle{tt}
+
+% ===== SPANISH TRADUCTIONS =====
+% \addto\captionsspanish{\renewcommand{\tablename}{Tabla}}
+
+
+
+% ==================== DOCS VARIABLES ====================
+\newcommand{\docTitle}{APA Article Title}
+\newcommand{\docCourse}{Course}
+\newcommand{\docAuthor}{Author name 1$^\ast$ \& Author name 2$^\dagger$}
+\newcommand{\docEmail}{email1@email.com$^\ast$, email2@email.com$^\dagger$}
+\newcommand{\docInstitution}{Faculty, University}
+\newcommand{\docDate}{DD MM, YYYY}
+
+\newcommand{\docAbstract}{\lipsum[2]}
+\newcommand{\docKeywords}{keyword, keyword, keyword}
+
+% ==================================================
+\begin{document}
+
+\input{sections/[1]-Introduction}
+\input{sections/[2]-Methodology}
+\input{sections/[3]-Results}
+\input{sections/[4]-Conclusions}
+
+% \begin{multicols}{2}
+%     \input{sections/[1]-Introduction}
+%     \input{sections/[2]-Methodology}
+%     \input{sections/[3]-Results}
+%     \input{sections/[4]-Conclusions}
+% \end{multicols}
+
+% ==================================================
+\printbibliography
+\end{document}

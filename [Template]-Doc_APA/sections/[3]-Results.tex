@@ -1,0 +1,16 @@
+\section{Results and discussion}
+\lipsum[4]
+
+\begin{figure}[H]
+    \centering
+    \begin{tikzpicture}
+        \begin{axis}[clip=false, xmin=-5, xmax=5, ymin=-10, ymax=10, axis lines=middle, xlabel=$x$, ylabel=$y$]
+            \addplot[red, samples=50, name path=f, dashed, domain=-3:3]{x^2}
+            node[right,pos=1]{$f(x)=x^2$};
+            \addplot[blue, samples=50, domain=-2:2, name path=g]{1-x^2}
+            node[right,pos=1]{$g(x)=1-x^2$};
+            \addplot[green, opacity=0.2] fill between[of=f and g, soft clip={domain=-0.70:0.70}];
+        \end{axis}
+    \end{tikzpicture}
+    \caption{Title}
+\end{figure}

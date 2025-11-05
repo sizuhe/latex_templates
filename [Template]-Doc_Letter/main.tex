@@ -1,0 +1,48 @@
+\documentclass{cls/letter-szh}
+
+\usepackage[english]{babel}
+
+
+
+% ==================== LETTER VARIABLES ====================
+\newcommand{\letterTitle}{Letter title}
+\newcommand{\letterDate}{DD MM, YYYY}
+
+% ========== SENDER INFO ==========
+\newcommand{\letterSName}{John}
+\newcommand{\letterSLastName}{Doe}
+\newcommand{\letterSCharge}{Work position/title}
+\newcommand{\letterSCity}{City, State}
+\newcommand{\letterSPhone}{(+00) 0000000000}
+\newcommand{\letterSEmail}{email@email.com}
+
+% ========== RECEIVER INFO ========== 
+\newcommand{\letterRName}{Jane Doe}
+\newcommand{\letterRCharge}{Receiver charge}
+\newcommand{\letterRCity}{Receiver City, State}
+
+% Side vertical line color definition: If next line is commented it will be black.
+% \definecolor{colorLine}{HTML}{0047AB}
+
+% ==================================================
+\begin{document}
+
+
+% ----- TEXT GOES HERE -----
+% Remember to delete this text and \lipsum[5] line
+\lipsum[5]
+
+% Adjust size and position accordingly with your signature image resolution
+\begin{tikzpicture}[remember picture,overlay]
+    \node[xshift=20mm,yshift=-25mm]
+    {\begin{adjustbox}{bgcolor=white}
+        \includegraphics[width=40mm]{signature.png}
+    \end{adjustbox}};
+\end{tikzpicture}
+
+% Uncomment desired single or multi signature
+\makesignature{}{}
+% \makesignatures{John Doe 1}{Work position/title 1}{John Doe 2}{Work position/title 2}
+
+% ==================================================
+\end{document}
