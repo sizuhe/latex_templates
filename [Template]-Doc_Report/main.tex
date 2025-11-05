@@ -1,0 +1,41 @@
+\documentclass{cls/report}
+
+\usepackage[english]{babel}
+\usepackage{array,amsmath}
+\renewcommand\ttdefault{ttfamily}
+\urlstyle{tt}
+
+% ===== SPANISH TRADUCTIONS =====
+% \addto\captionsspanish{\renewcommand{\tablename}{Tabla}}
+
+
+
+% ==================== DOCS VARIABLES ====================
+\newcommand{\docTitle}{Report name}
+\newcommand{\docAuthors}{Author name 1 \& Author name 2}
+\newcommand{\docContract}{Contract 000000}
+\newcommand{\docRevision}{Revision 1}
+\newcommand{\docDate}{DD MM, YYYY}
+\newcommand{\docObject}{\lipsum[2]}
+
+% ==================================================
+\begin{document}
+\maketitle{Object: }
+
+\input{sections/[1]-Introduction}
+\input{sections/[2]-Development}
+\input{sections/[3]-Results}
+
+% ==================================================
+
+\printbibliography
+
+% \begin{tikzpicture}[remember picture,overlay]
+%     \node[xshift=20mm,yshift=-25mm]
+%     {\begin{adjustbox}{bgcolor=white}
+%         \includegraphics[width=40mm]{signature.png}
+%     \end{adjustbox}};
+% \end{tikzpicture}
+\makesignature{Name 1}{Position 1}
+
+\end{document}
