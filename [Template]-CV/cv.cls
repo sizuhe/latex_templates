@@ -23,12 +23,12 @@
 % ============================================================
 
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesClass{CV}[2025/11/24 CV]
+\ProvidesClass{CV}[2025/11/25 CV]
 \LoadClass[10pt]{article}    % 215.9 x 279.4
 
 \RequirePackage[margin=1.5cm]{geometry}
 \RequirePackage[spanish]{babel}
-\RequirePackage{lipsum,xcolor,tabularx,enumitem,setspace,hyperref,fancyhdr,multicol,tikz,adjustbox,letterspace,fontawesome5,xifthen,hyperref,graphicx,float}
+\RequirePackage{lipsum,xcolor,tabularx,enumitem,setspace,hyperref,fancyhdr,multicol,tikz,adjustbox,letterspace,fontawesome5,xifthen,hyperref,graphicx,float,hyphenat}
 
 % ========== Fonts ==========
 % ===== SERIF FONTS =====
@@ -56,7 +56,12 @@
 \definecolor{colorBlack}{HTML}{262626}
 
 \newcommand{\setcolor}[1]{{\color{colorBlack!80}#1}}
+\newcommand{\addindent}{\hspace*{4mm}}
+
 \setlength\parindent{0pt}
+
+\hyphenpenalty=10000
+\exhyphenpenalty=10000
 
 
 
@@ -151,7 +156,7 @@
         \begin{center}
             {\color{colorMain}\Large\bfseries #1}
         \end{center}
-        \vspace{-6mm}
+        \vspace{-4mm}
     }
 
     \newcommand{\cvSubSection}[1]{
@@ -166,19 +171,28 @@
     \newcommand{\addSectionContent}[4]{
         \begin{center}
             \begin{tabularx}{\textwidth} {
-                >{\hsize=0.8\hsize\raggedright\arraybackslash}X
-                >{\hsize=0.2\hsize\raggedleft\arraybackslash}X
+                >{\hsize=0.74\hsize\raggedright\arraybackslash}X
+                >{\hsize=0.26\hsize\raggedleft\arraybackslash}X
             }
             \mbox{\color{colorBlack!80}{\bfseries#1}\ -\ #2\ \textit{#3}} & \mbox{\small\color{colorMain}\bfseries#4}
             \end{tabularx}
         \end{center}
-        \vspace{-6mm}
+        \vspace{-5mm}
         {\color{colorBlack}\rule{\textwidth}{0.01mm}}
+    }
+
+    \newcommand{\addSubSectionContent}[2]{
+        \color{colorBlack!80}{\bfseries#1}\ -\ #2
+        % \newline
     }
 
     \newcommand{\addSpace}{
         \vspace{4mm}
     }
+
+    % ==================================================
+    
+    \protect\thispagestyle{empty}
 }
 
 
