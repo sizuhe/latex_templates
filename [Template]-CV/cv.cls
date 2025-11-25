@@ -23,7 +23,7 @@
 % ============================================================
 
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesClass{CV}[2025/08/13 CV]
+\ProvidesClass{CV}[2025/11/24 CV]
 \LoadClass[10pt]{article}    % 215.9 x 279.4
 
 \RequirePackage[margin=1.5cm]{geometry}
@@ -55,6 +55,7 @@
 % ============================== CAN BE MODIFIED ==============================
 \definecolor{colorBlack}{HTML}{262626}
 
+\newcommand{\setcolor}[1]{{\color{colorBlack!80}#1}}
 \setlength\parindent{0pt}
 
 
