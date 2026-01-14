@@ -23,11 +23,10 @@
 % ============================================================
 
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesClass{CV}[2025/11/25 CV]
+\ProvidesClass{CV}[2026/01/13 CV]
 \LoadClass[10pt]{article}    % 215.9 x 279.4
 
 \RequirePackage[margin=1.5cm]{geometry}
-\RequirePackage[spanish]{babel}
 \RequirePackage{lipsum,xcolor,tabularx,enumitem,setspace,hyperref,fancyhdr,multicol,tikz,adjustbox,letterspace,fontawesome5,xifthen,hyperref,graphicx,float,hyphenat}
 
 % ========== Fonts ==========
