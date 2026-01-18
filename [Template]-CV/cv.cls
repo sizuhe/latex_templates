@@ -1,7 +1,7 @@
 % ============================================================
 % MIT License
 
-% Copyright (c) 2025 Simon Zuluaga Henao.
+% Copyright (c) 2026 Simon Zuluaga Henao.
 
 % Permission is hereby granted, free of charge, to any person obtaining a copy
 % of this software and associated documentation files (the "Software"), to deal
@@ -23,11 +23,10 @@
 % ============================================================
 
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesClass{CV}[2025/11/25 CV]
+\ProvidesClass{CV}[2026/01/17 CV]
 \LoadClass[10pt]{article}    % 215.9 x 279.4
 
 \RequirePackage[margin=1.5cm]{geometry}
-\RequirePackage[spanish]{babel}
 \RequirePackage{lipsum,xcolor,tabularx,enumitem,setspace,hyperref,fancyhdr,multicol,tikz,adjustbox,letterspace,fontawesome5,xifthen,hyperref,graphicx,float,hyphenat}
 
 % ========== Fonts ==========
@@ -154,40 +153,58 @@
     
     \newcommand{\cvSection}[1]{
         \begin{center}
-            {\color{colorMain}\Large\bfseries #1}
+            {\color{colorBlack!80}\large\bfseries#1}
+        \end{center}
+        \vspace{-5mm}
+        {\color{colorBlack!80}\rule{\textwidth}{0.01mm}}
+    }
+
+    \newcommand{\cvSubSection}[1]{
+        \begin{center}
+            \begin{tabularx}{\textwidth}{@{}
+                    >{\hsize=1\hsize\raggedright\arraybackslash}X
+                @{}}
+                \mbox{\color{colorBlack!80}\bfseries #1}
+            \end{tabularx}
+        \end{center}
+        \vspace{-7mm}
+    }
+
+    \newcommand{\addSectionContent}[4]{
+        \vspace{-6mm}
+        \begin{center}
+            \begin{tabularx}{\textwidth}{@{}
+                    >{\hsize=0.7\hsize\raggedright\arraybackslash}X
+                    >{\hsize=0.3\hsize\raggedleft\arraybackslash}X
+                @{}}
+                \mbox{\color{colorBlack!80}#1} & \mbox{\small\color{colorBlack!80}#2}
+            \end{tabularx}
+            \begin{tabularx}{\textwidth}{@{}
+                    >{\hsize=0.7\hsize\raggedright\arraybackslash}X
+                    >{\hsize=0.3\hsize\raggedleft\arraybackslash}X
+                @{}}
+                \mbox{\color{colorBlack!80}{\bfseries#3}} & \mbox{\small\color{colorBlack!80}#4}
+            \end{tabularx}
+        \end{center}
+    }
+
+    \newcommand{\addSubSectionContent}[2]{
+        \vspace{-6mm}
+        \begin{center}
+            \begin{tabularx}{\textwidth}{@{}
+                    >{\hsize=1\hsize\raggedright\arraybackslash}X
+                @{}}
+                \mbox{{\color{colorBlack!80}{\bfseries#1:}}\ \small{#2}}
+            \end{tabularx}
         \end{center}
         \vspace{-4mm}
     }
 
-    \newcommand{\cvSubSection}[1]{
-        \begin{tabularx}{\textwidth} {
-                >{\hsize=1\hsize\raggedright\arraybackslash}X
-            }
-            \mbox{\color{colorBlack!80}\bfseries #1}
-        \end{tabularx}
-        \vspace*{-8mm}
+    \newcommand{\addContentSpace}{
+        \null\vspace{2mm}
     }
-
-    \newcommand{\addSectionContent}[4]{
-        \begin{center}
-            \begin{tabularx}{\textwidth} {
-                >{\hsize=0.74\hsize\raggedright\arraybackslash}X
-                >{\hsize=0.26\hsize\raggedleft\arraybackslash}X
-            }
-            \mbox{\color{colorBlack!80}{\bfseries#1}\ -\ #2\ \textit{#3}} & \mbox{\small\color{colorMain}\bfseries#4}
-            \end{tabularx}
-        \end{center}
-        \vspace{-5mm}
-        {\color{colorBlack}\rule{\textwidth}{0.01mm}}
-    }
-
-    \newcommand{\addSubSectionContent}[2]{
-        \color{colorBlack!80}{\bfseries#1}\ -\ #2
-        % \newline
-    }
-
     \newcommand{\addSpace}{
-        \vspace{4mm}
+        \vspace{2mm}
     }
 
     % ==================================================

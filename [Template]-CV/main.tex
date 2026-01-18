@@ -1,7 +1,7 @@
 \documentclass[cv01]{cv}
 % \documentclass[cv02]{cv}
 
-\definecolor{colorMain}{HTML}{1747A6}       % Only for CV01
+\usepackage[spanish]{babel}
 
 
 
@@ -31,7 +31,7 @@
 
 % ========== CV 01 ==========
 \cvSection{Education}
-\addSectionContent{Degree}{Institution}{$|$ Location}{XXXX - Present}
+\addSectionContent{Institution}{Location}{Position}{XXXX - Present}
 \begin{itemize}
     \item \lipsum[75]
     \item \lipsum[66]
@@ -41,13 +41,14 @@
 % --------------------------------------------------
 \addSpace
 \cvSection{Experience}
-\addSectionContent{Position}{Company}{$|$ Location}{XXXX - Present}
+\addSectionContent{Institution}{Location}{Position}{XXXX - Present}
 \begin{itemize}
     \item \lipsum[75]
     \item \lipsum[66]
 \end{itemize}
+\addContentSpace
 
-\addSectionContent{Position}{Company}{$|$ Location}{XXXX - XXXX}
+\addSectionContent{Institution}{Location}{Position}{XXXX - Present}
 \begin{itemize}
     \item \lipsum[75]
     \item \lipsum[7]
@@ -57,7 +58,7 @@
 % --------------------------------------------------
 \addSpace
 \cvSection{Skills}
-\addSectionContent{Technical}{Skill 1, Skill 2, Skill 3}{}{}
+\addSubSectionContent{Technical}{Skill 1, Skill 2, Skill 3}
 
 \cvSubSection{Languages}
 \begin{multicols}{4}
@@ -157,7 +158,7 @@
 
 % \clearpage
 % \vspace*{0.4cm}
-% \afterpage      % Keep if you want to maintain second column only.
+% % \afterpage      % Keep if you want to maintain second column only.
 
 % {
 %     \cvSection{1}{Experience}
