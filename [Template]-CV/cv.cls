@@ -143,6 +143,22 @@
     \end{tikzpicture}
 }
 
+\fancypagestyle{morePages}{
+    \fancyhf{}          % Clear header/footer
+
+    \renewcommand{\footrule}{
+      {\color{colorBlack!45}
+      \hrule width\headwidth height\footrulewidth}
+    }
+
+    \renewcommand{\headrulewidth}{0pt}
+    \renewcommand{\footrulewidth}{0.2pt}
+ 
+    \fancyhead[R]{\parbox[b]{2cm}{\vspace*{1cm}\raggedleft\color{colorBlack!45}{\thepage}}}
+    \fancyfoot[L]{\raisebox{1.5cm}{\nameFirst\ \color{colorBlack!45}\nameLast}}
+    \fancyfoot[R]{\raisebox{1.5cm}{\color{colorBlack!45}\nameTitle}}
+}
+
 
 % ============================================================
 % ========== CV01 attributes ========== %
@@ -210,6 +226,7 @@
     % ==================================================
     
     \protect\thispagestyle{empty}
+    \pagestyle{morePages}
 }
 
 
@@ -280,24 +297,6 @@
 
     \newcommand{\afterpage}{
         \newgeometry{margin=1.5cm, left=8.3cm}
-    }
-
-    % ==================================================
-    
-    \fancypagestyle{morePages}{
-        \fancyhf{}          % Clear header/footer
-
-        \renewcommand{\footrule}{
-          {\color{colorBlack!45}
-          \hrule width\headwidth height\footrulewidth}
-        }
-    
-        \renewcommand{\headrulewidth}{0pt}
-        \renewcommand{\footrulewidth}{0.2pt}
-     
-        \fancyhead[R]{\parbox[b]{2cm}{\vspace*{1cm}\raggedleft\color{colorBlack!45}{\thepage}}}
-        \fancyfoot[L]{\raisebox{1.5cm}{\nameFirst\ \color{colorBlack!45}\nameLast}}
-        \fancyfoot[R]{\raisebox{1.5cm}{\color{colorBlack!45}\nameTitle}}
     }
 
     % ==================================================
