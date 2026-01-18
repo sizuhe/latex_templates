@@ -183,7 +183,7 @@
                     >{\hsize=0.7\hsize\raggedright\arraybackslash}X
                     >{\hsize=0.3\hsize\raggedleft\arraybackslash}X
                 @{}}
-                \mbox{\color{colorBlack!80}{\bfseries#3}} & \mbox{\small\color{colorBlack!80}#4}
+                \mbox{\color{colorBlack!80}{\bfseries#3}} & \mbox{\small\color{colorBlack!80}\textit{#4}}
             \end{tabularx}
         \end{center}
     }
