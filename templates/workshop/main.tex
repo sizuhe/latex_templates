@@ -1,0 +1,32 @@
+\documentclass{cls/workshop-sizuhe}
+
+\usepackage[english]{babel}
+\usepackage{array,amsmath}
+\renewcommand\ttdefault{ttfamily}
+\urlstyle{tt}
+
+% ===== SPANISH TRADUCTIONS =====
+% \addto\captionsspanish{\renewcommand{\tablename}{Tabla}}
+
+
+
+% ==================== DOCS VARIABLES ====================
+\newcommand{\docTitle}{Workshop name}
+\newcommand{\docAuthors}{Author name 1$^*$ \& Author name 2$^\dagger$}
+\newcommand{\docEmails}{Email1$^*$ \& Email2$^\dagger$}
+\newcommand{\docDate}{DD MM, YYYY}
+\newcommand{\docObjective}{\lipsum[2]}
+
+% ==================================================
+\begin{document}
+\maketitle{Objective: }
+
+\input{sections/[1]-Introduction}
+\input{sections/[2]-Development}
+\input{sections/[3]-Results}
+
+% ==================================================
+
+\printbibliography
+
+\end{document}

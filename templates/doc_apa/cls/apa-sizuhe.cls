@@ -88,7 +88,7 @@
     \titleformat{\subsubsection}{\bfseries}{\thesubsubsection.\ }{0pt}{\vspace{\@sectionsSpacing}}
 
     % ==================================================
-    
+
     \renewcommand{\maketitle}{
         {\LARGE\bfseries\docTitle}
         \vspace{2mm}\\
@@ -101,15 +101,15 @@
                 \docInstitution\\
                 \docDate
             \end{spacing}
-            
+
             \vspace{6mm}
-            
+
             \begin{spacing}{1}
                 \docAbstract
             \end{spacing}
-    
+
             \vspace{2mm}
-    
+
             \textit{{\bfseries{Keywords:}} \docKeywords.}
             }
         }
@@ -120,7 +120,7 @@
 
     \fancypagestyle{front}{
         \renewcommand{\headrulewidth}{0pt}
-        
+
         \lhead{}
         \rhead{}
         \chead{}
@@ -135,7 +135,7 @@
             \hbox to\headwidth{%
             \color{colorBlack!20}\leaders\hrule height \headrulewidth\hfill}
         }
-        
+
         \lhead{\color{colorBlack!70}\small\bfseries\docTitle}
         \rhead{\color{colorBlack!60}\small\docCourse}
         \chead{}
@@ -148,10 +148,10 @@
 
     \AtBeginDocument{
         \onehalfspacing
-        
+
         \thispagestyle{front}
         \pagestyle{apa01}
-        
+
         \maketitle
         \vspace{4mm}
     }
@@ -166,7 +166,7 @@
     \titleformat{\subsubsection}{\bfseries}{\thesubsubsection.\ }{0pt}{\vspace{\@sectionsSpacing}}
 
     % ==================================================
-    
+
     \renewcommand{\maketitle}{
         {\LARGE\bfseries\docTitle}
         \vspace{2mm}\\
@@ -178,7 +178,7 @@
             \docInstitution\\
         \end{spacing}
         }
-        
+
         \vspace{3mm}
 
         {\color{colorBlack!40}\hrule}\vspace{-.6mm}
@@ -223,7 +223,7 @@
             \color{colorBlack!20}
             \hrulefill
         }
-        
+
         \lhead{}
         \rhead{\color{colorBlack!60}\thepage}
         \chead{}

@@ -23,7 +23,7 @@
 % ============================================================
 
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesClass{DocLetter}[2025/11/01 DocLetter]
+\ProvidesClass{Letter}[2025/11/01 Letter]
 \LoadClass[10pt]{article}    % 215.9 x 279.4
 
 \RequirePackage[margin=3cm,headsep=2.54cm,footskip=2.54cm,includefoot,includehead]{geometry}
@@ -76,7 +76,7 @@
         \letterRCity
     \end{flushleft}
     \vspace*{10mm}
-    
+
     \begin{flushright}
         {\color{colorGray}\letterDate}
     \end{flushright}
@@ -140,6 +140,6 @@
 
 \AtBeginDocument{
     \pagestyle{letter}
-        
+
     \maketitle
 }
