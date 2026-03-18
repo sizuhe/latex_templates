@@ -71,4 +71,6 @@ A collection of customizable LaTeX templates designed for various use cases, ran
 
 
 ## How to use
-All templates are fully compatible with both local LaTeX editors and online editors like Overleaf. To use a template, simply create a new `.tex` file and include the corresponding class file using the `\documentclass{}` command. Customize the content as needed while maintaining the structure and functions provided by the class files.
+All templates are fully compatible with both local LaTeX editors and online editors like *Overleaf*. To use a template, simply create a new `.tex` file and include the corresponding class file using the `\documentclass{}` command. Customize the content as needed while maintaining the structure and functions provided by the class files.
+
+> If you are using *Overleaf* you must download the entire repository, convert the desired template folder to a zip file and upload it to your project. This way you will have access to all the necessary files for the template to work properly.
