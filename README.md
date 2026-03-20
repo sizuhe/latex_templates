@@ -4,7 +4,7 @@ A collection of customizable LaTeX templates designed for various use cases, ran
 
 
 ## Template types
-- **Resumes/CVs**: 2 Modern and professional templates for creating CVs.
+- **Resumes/CVs**: 2 Modern and professional templates for creating CVs. 1 ATS-friendly version.
 - **Academic document**: 2 Templates for articles, reports or general use documents with APA formatting.
 - **Letters**: Elegant, simple and customizable letter templates.
 - **Reports**: Template for technical reports with APA formatting.
