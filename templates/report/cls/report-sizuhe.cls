@@ -23,7 +23,7 @@
 % ============================================================
 
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesClass{Report}[2026/03/17 Report]
+\ProvidesClass{Report}[2026/03/23 Report]
 \LoadClass[10pt]{article}    % 215.9 x 279.4
 
 \RequirePackage[margin=2.54cm, bottom=3.2cm]{geometry}
@@ -119,18 +119,33 @@
     \end{minipage}
 }
 
+\newcommand{\logopath}{}
+\newcommand{\logosize}{15mm}
+\newif\ifreportlogo
+\reportlogofalse
+
+\newcommand{\setlogo}[2][15mm]{
+    \renewcommand{\logosize}{#1}
+    \if\relax\detokenize{#2}\relax
+        \reportlogofalse
+    \else
+        \renewcommand{\logopath}{#2}
+        \reportlogotrue
+    \fi
+}
+
 % ==================================================
 
 \fancypagestyle{report}{
     \renewcommand{\headrulewidth}{0pt}
     
     \lhead{
-        \begin{tikzpicture}[remember picture,overlay]
-            \node[xshift=-74mm,yshift=-8mm,anchor=north] at (current page.north)
-            {\begin{adjustbox}{}
-                \includegraphics[width=15mm]{logo.pdf}
-            \end{adjustbox}};
-        \end{tikzpicture}
+        \ifreportlogo
+            \begin{tikzpicture}[remember picture,overlay]
+                \node[xshift=-74mm,yshift=-10mm,anchor=north] at (current page.north)
+                {\includegraphics[width=\logosize]{\logopath}};
+            \end{tikzpicture}
+        \fi
     }
     \rhead{
         {\colorbox{colorBlack!75}{\makebox[0.25\textwidth][r]{\color{colorBlack!5}\bfseries\docContract}}}
