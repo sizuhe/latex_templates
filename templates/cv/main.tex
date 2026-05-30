@@ -46,6 +46,7 @@
     \item \lipsum[75]
     \item \lipsum[66]
 \end{itemize}
+
 \addContentSpace
 
 \addSectionContent{Institution}{Location}{Position}{XXXX - Present}
@@ -101,7 +102,6 @@
 
 % ========== CV 02 ==========
 % \cvSection uses the first argument to define if the section is the first one of the column. "1" means it's the first one of the column so it doesnt create vertical space before the title, for "0" it does creates vertical space.
-% \content function is not used from the second page onwards.
 % \content{
 %     \cvSection{1}{Education}
 %     \addSectionContent{Degree}{Institution}{Location}{XXXX - XXXX}
@@ -158,9 +158,8 @@
 
 % \clearpage
 % \vspace*{0.4cm}
-% % \afterpage      % Keep if you want to maintain second column only.
 
-% {
+% \content{\mbox{}}{
 %     \cvSection{1}{Experience}
 %     \addSectionContent{Position}{Company}{Location}{XXXX - Present}
 %     \addSectionDescription{\lipsum[66]}

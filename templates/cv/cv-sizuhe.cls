@@ -23,7 +23,7 @@
 % ============================================================
 
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesClass{CV}[2026/01/17 CV]
+\ProvidesClass{CV}[2026/05/30 CV]
 \LoadClass[10pt]{article}    % 215.9 x 279.4
 
 \RequirePackage[margin=1.5cm]{geometry}
@@ -163,7 +163,7 @@
 % ============================================================
 % ========== CV01 attributes ========== %
 \DeclareOption{cv01}{
-    \setlist{topsep=-1mm,itemsep=-1mm,label={\color{colorBlack!80}$\cdot$},before=\small}
+    \setlist{itemsep=-1mm,label={\color{colorBlack!80}$\cdot$},before=\vspace{-3mm}\small}
 
     % ==================================================
     
@@ -208,9 +208,9 @@
         \vspace{-6mm}
         \begin{center}
             \begin{tabularx}{\textwidth}{@{}
-                    >{\hsize=1\hsize\raggedright\arraybackslash}X
-                @{}}
-                \mbox{{\color{colorBlack!80}{\bfseries#1:}}\ \small{#2}}
+                >{\hsize=1\hsize\raggedright\arraybackslash}X
+            @{}}
+                {\color{colorBlack!80}\bfseries #1:}\ \small #2
             \end{tabularx}
         \end{center}
         \vspace{-4mm}
