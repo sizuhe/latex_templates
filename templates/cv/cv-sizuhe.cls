@@ -113,12 +113,12 @@
         \fi
     \fi
 
-    
+
     \ifnum#2=1
         \makebox[\linewidth]{\color{colorBlack!20}\rule{\paperwidth}{0.01mm}}
         \vspace{-3mm}
     \else
-        \vspace{8mm} 
+        \vspace{8mm}
     \fi
 }
 
@@ -153,7 +153,7 @@
 
     \renewcommand{\headrulewidth}{0pt}
     \renewcommand{\footrulewidth}{0.2pt}
- 
+
     \fancyhead[R]{\parbox[b]{2cm}{\vspace*{1cm}\raggedleft\color{colorBlack!45}{\thepage}}}
     \fancyfoot[L]{\raisebox{1.5cm}{\nameFirst\ \color{colorBlack!45}\nameLast}}
     \fancyfoot[R]{\raisebox{1.5cm}{\color{colorBlack!45}\nameTitle}}
@@ -166,7 +166,7 @@
     \setlist{itemsep=-1mm,label={\color{colorBlack!80}$\cdot$},before=\vspace{-3mm}\small}
 
     % ==================================================
-    
+
     \newcommand{\cvSection}[1]{
         \begin{center}
             {\color{colorBlack!80}\large\bfseries#1}
@@ -213,7 +213,7 @@
                 {\color{colorBlack!80}\bfseries #1:}\ \small #2
             \end{tabularx}
         \end{center}
-        \vspace{-4mm}
+        \vspace{-2mm}
     }
 
     \newcommand{\addContentSpace}{
@@ -224,7 +224,7 @@
     }
 
     % ==================================================
-    
+
     \protect\thispagestyle{empty}
     \pagestyle{morePages}
 }
@@ -300,7 +300,7 @@
     }
 
     % ==================================================
-    
+
     \protect\thispagestyle{empty}
     \pagestyle{morePages}
 }
