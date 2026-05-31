@@ -23,7 +23,7 @@
 % ============================================================
 
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesClass{CV}[2026/05/30 CV]
+\ProvidesClass{CV}[2026/05/31 CV]
 \LoadClass[10pt]{article}    % 215.9 x 279.4
 
 \RequirePackage[margin=1.5cm]{geometry}
@@ -163,7 +163,12 @@
 % ============================================================
 % ========== CV01 attributes ========== %
 \DeclareOption{cv01}{
-    \setlist{itemsep=-1mm,label={\color{colorBlack!80}$\cdot$},before=\vspace{-3mm}\small}
+    \setlist{
+        itemsep=-1mm,
+        label={\color{colorBlack!80}$\cdot$},
+        before=\vspace{-6mm}\small,
+        after=\vspace{2mm}
+    }
 
     % ==================================================
 
@@ -171,7 +176,7 @@
         \begin{center}
             {\color{colorBlack!80}\large\bfseries#1}
         \end{center}
-        \vspace{-5mm}
+        \null\vspace*{-10mm}
         {\color{colorBlack!80}\rule{\textwidth}{0.01mm}}
     }
 
@@ -187,40 +192,38 @@
     }
 
     \newcommand{\addSectionContent}[4]{
-        \vspace{-6mm}
-        \begin{center}
-            \begin{tabularx}{\textwidth}{@{}
-                    >{\hsize=0.7\hsize\raggedright\arraybackslash}X
-                    >{\hsize=0.3\hsize\raggedleft\arraybackslash}X
-                @{}}
-                \mbox{\color{colorBlack!80}#1} & \mbox{\small\color{colorBlack!80}#2}
-            \end{tabularx}
-            \begin{tabularx}{\textwidth}{@{}
-                    >{\hsize=0.7\hsize\raggedright\arraybackslash}X
-                    >{\hsize=0.3\hsize\raggedleft\arraybackslash}X
-                @{}}
-                \mbox{\color{colorBlack!80}{\bfseries#3}} & \mbox{\small\color{colorBlack!80}\textit{#4}}
-            \end{tabularx}
-        \end{center}
+        \begin{tabularx}{\textwidth}{@{}
+                >{\hsize=0.7\hsize\raggedright\arraybackslash}X
+                >{\hsize=0.3\hsize\raggedleft\arraybackslash}X
+            @{}}
+            \mbox{\color{colorBlack!80}#1} & \mbox{\small\color{colorBlack!80}#2}
+        \end{tabularx}
+
+        \vspace*{0mm}
+
+        \begin{tabularx}{\textwidth}{@{}
+                >{\hsize=0.7\hsize\raggedright\arraybackslash}X
+                >{\hsize=0.3\hsize\raggedleft\arraybackslash}X
+            @{}}
+            \mbox{\color{colorBlack!80}{\bfseries#3}} & \mbox{\small\color{colorBlack!80}\textit{#4}}
+        \end{tabularx}
     }
 
     \newcommand{\addSubSectionContent}[2]{
-        \vspace{-6mm}
-        \begin{center}
-            \begin{tabularx}{\textwidth}{@{}
-                >{\hsize=1\hsize\raggedright\arraybackslash}X
-            @{}}
-                {\color{colorBlack!80}\bfseries #1:}\ \small #2
-            \end{tabularx}
-        \end{center}
-        \vspace{-2mm}
+        \vspace*{-1mm}
+        \begin{tabularx}{\textwidth}{@{}
+            >{\hsize=1\hsize\raggedright\arraybackslash}X
+        @{}}
+            \vspace*{-2mm}
+            {\color{colorBlack!80}\bfseries #1:}\ \small #2
+        \end{tabularx}
     }
 
     \newcommand{\addContentSpace}{
-        \null\vspace{2mm}
+        \vspace*{0.4mm}
     }
     \newcommand{\addSpace}{
-        \vspace{2mm}
+        \null
     }
 
     % ==================================================
