@@ -73,4 +73,30 @@ A collection of customizable LaTeX templates designed for various use cases, ran
 ## How to use
 All templates are fully compatible with both local LaTeX editors and online editors like *Overleaf*. To use a template, simply create a new `.tex` file and include the corresponding class file using the `\documentclass{}` command. Customize the content as needed while maintaining the structure and functions provided by the class files.
 
-> If you are using *Overleaf* you must download the entire repository, convert the desired template folder to a zip file and upload it to your project. This way you will have access to all the necessary files for the template to work properly.
+- If you are using *Overleaf* you must download the entire repository, convert the desired template folder to a zip file and upload it to your project. This way you will have access to all the necessary files for the template to work properly.
+- Another recommended workflow is to use a local installed TinyTex-2 and VSCode with the LaTeX Workshop extension.
+
+
+### Docker
+A `Dockerfile` and a `Justfile` are provided for easy compilation of the templates using Docker. Run the following Just commands in the terminal:
+
+```bash
+# To build the Docker image
+just build
+
+# Compiles the main.tex file and returns the PDF.
+just compile
+```
+
+If Just is not installed, you can run the Docker commands directly:
+
+```bash
+# Build the Docker image
+docker build -t latex-env .
+
+# Compile the main.tex file
+docker run --rm -v "$(pwd):/workspace" latex-env sh -c "latexmk -pdf main.tex && latexmk -c"    # Returns only the .pdf file
+docker run --rm -v "$(pwd):/workspace" latex-env pdflatex main.tex    # Returns the .pdf file and all the auxiliary files
+```
+
+> The image size should be around 1 GB and should take around 1 min to build.
