@@ -78,17 +78,12 @@ All templates are fully compatible with both local LaTeX editors and online edit
 
 
 ### Docker
-A `Dockerfile` and a `Justfile` are provided for easy compilation of the templates using Docker. Run the following Just commands in the terminal:
+A `Dockerfile` and a `Justfile` are provided for an easy containerize compilation of the templates using Docker. 
 
-```bash
-# To build the Docker image
-just build
+- To build the Docker image, run the `just build` command. This will create a Docker image with all the necessary LaTeX packages installed.
+- To compile a template, you must run the `just compile` command in the terminal inside the desired template folder. This will compile the `main.tex` file and return the resulting PDF.
 
-# Compiles the main.tex file and returns the PDF.
-just compile
-```
-
-If Just is not installed, you can run the Docker commands directly:
+If `Just` is not installed, you can run the `Docker` commands directly inside the template you want to compile:
 
 ```bash
 # Build the Docker image
