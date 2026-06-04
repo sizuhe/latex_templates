@@ -1,6 +1,12 @@
+set windows-shell := ["cmd.exe", "/c"]
+
+
+
+
+
 # Show available commands
 help:
-	@just --justfile {{ justfile() }} --list
+	@just --list
 
 
 # Build the Docker image -- Docker must be installed and running --.
